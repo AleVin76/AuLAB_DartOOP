@@ -9,6 +9,7 @@ class Auto {
     return annoImmatricolazione < DateTime.now().year - 20;
   }
 
+  @override
   String toString() {
     return "$brand $model ($annoImmatricolazione)";
   }
