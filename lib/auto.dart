@@ -1,12 +1,15 @@
-class Auto
-{
+class Auto {
   String brand;
   String model;
-  int age;
+  int annoImmatricolazione;
 
-  Auto(this.brand, this.model, this.age);
+  Auto(this.brand, this.model, this.annoImmatricolazione);
 
   bool isVintage() {
-    return age > 20;
+    return annoImmatricolazione < DateTime.now().year - 20;
+  }
+
+  String toString() {
+    return "$brand $model ($annoImmatricolazione)";
   }
 }

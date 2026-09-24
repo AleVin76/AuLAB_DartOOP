@@ -3,9 +3,20 @@ import 'package:dart_application/auto.dart';
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
 
-  Auto auto1 = Auto("Toyota", "Corolla", 12);
-  print("La ${auto1.brand} ${auto1.model} è vintage: ${auto1.isVintage()}");
+  var autos = [
+    Auto("Toyota", "Corolla", 1995),
+    Auto("Fiat", "500", 2020),
+    Auto("Ford", "Mustang", 2010),
+    Auto("Chevrolet", "Camaro", 2015),
+  ];
 
-  Auto auto2 = Auto("Fiat", "500", 60);
-  print("La ${auto2.brand} ${auto2.model} è vintage: ${auto2.isVintage()}");
+  print("===[ Verifica se le auto sono vintage ]========");
+  for (var auto in autos) {
+    print("La ${auto.brand} ${auto.model} è vintage: ${auto.isVintage()}");
+  }
+
+  print("\n===[ Lista completa delle auto ]========");
+  for (var auto in autos) {
+    print(auto);
+  }
 }
