@@ -1,4 +1,4 @@
-import 'package:dart_application/studente.dart';
+import 'package:dart_application/calcolatrice.dart';
 
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
@@ -20,30 +20,36 @@ void main(List<String> arguments) {
   //   print(auto);
   // }
 
-  var studenti = [
-    Studente("Mario", 8),
-    Studente("Luca", 9),
-    Studente("Giulia", 7),
-  ];
+  // var studenti = [
+  //   Studente("Mario", 8),
+  //   Studente("Luca", 9),
+  //   Studente("Giulia", 7),
+  // ];
 
-  print("===[ Lista completa degli studenti ]========");
-  for (var studente in studenti) {
-    print("Studente: ${studente.getNome}, Voto: ${studente.getVoto}");
-  }
+  // print("===[ Lista completa degli studenti ]========");
+  // for (var studente in studenti) {
+  //   print("Studente: ${studente.getNome}, Voto: ${studente.getVoto}");
+  // }
 
-  studenti[2].setVoto = 10; // Modifica il voto di Giulia
+  // studenti[2].setVoto = 10; // Modifica il voto di Giulia
 
-  print("\n===[ Lista completa degli studenti aggiornata ]========");
-  for (var studente in studenti) {
-    print("Studente: ${studente.getNome}, Voto: ${studente.getVoto}");
-  }
+  // print("\n===[ Lista completa degli studenti aggiornata ]========");
+  // for (var studente in studenti) {
+  //   print("Studente: ${studente.getNome}, Voto: ${studente.getVoto}");
+  // }
 
-  print("\nMedia dei voti degli studenti: ${getMediaVoti(studenti)}");
+  // print("\nMedia dei voti degli studenti: ${getMediaVoti(studenti)}");
+
+  print("\n===[ Calcolatrice ]========");
+  print("Somma: ${Calcolatrice.somma(5, 3)}");
+  print("Sottrazione: ${Calcolatrice.sottrai(5, 3)}");
+  print("Moltiplicazione: ${Calcolatrice.moltiplica(5, 3)}");
+  print("Divisione: ${Calcolatrice.dividi(5, 3)}");
 }
 
-// Funzione per calcolare la media dei voti degli studenti
-double getMediaVoti(List<Studente> studenti) {
-  double media =
-      studenti.map((s) => s.getVoto).reduce((a, b) => a + b) / studenti.length;
-  return media;
-}
+// // Funzione per calcolare la media dei voti degli studenti
+// double getMediaVoti(List<Studente> studenti) {
+//   double media =
+//       studenti.map((s) => s.getVoto).reduce((a, b) => a + b) / studenti.length;
+//   return media;
+// }
