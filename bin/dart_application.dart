@@ -1,4 +1,5 @@
 import 'package:dart_application/calcolatrice.dart';
+import 'package:dart_application/prodotto.dart';
 
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
@@ -40,11 +41,20 @@ void main(List<String> arguments) {
 
   // print("\nMedia dei voti degli studenti: ${getMediaVoti(studenti)}");
 
-  print("\n===[ Calcolatrice ]========");
-  print("Somma: ${Calcolatrice.somma(5, 3)}");
-  print("Sottrazione: ${Calcolatrice.sottrai(5, 3)}");
-  print("Moltiplicazione: ${Calcolatrice.moltiplica(5, 3)}");
-  print("Divisione: ${Calcolatrice.dividi(5, 3)}");
+  // print("\n===[ Calcolatrice ]========");
+  // print("Somma: ${Calcolatrice.somma(5, 3)}");
+  // print("Sottrazione: ${Calcolatrice.sottrai(5, 3)}");
+  // print("Moltiplicazione: ${Calcolatrice.moltiplica(5, 3)}");
+  // print("Divisione: ${Calcolatrice.dividi(5, 3)}");
+
+  print("\n===[ Prodotto ]========");
+  var prodotto = Prodotto(1, "Prodotto A", 100.0);
+  var prodottoScontato = Prodotto.sconto(2, "Prodotto B", 200.0);
+
+  print("Prodotto: ${prodotto.nome}, Prezzo: ${prodotto.prezzo}");
+  print(
+    "Prodotto scontato: ${prodottoScontato.nome}, Prezzo: ${prodottoScontato.prezzo}",
+  );
 }
 
 // // Funzione per calcolare la media dei voti degli studenti
