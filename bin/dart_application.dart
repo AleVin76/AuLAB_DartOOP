@@ -1,5 +1,5 @@
-import 'package:dart_application/calcolatrice.dart';
-import 'package:dart_application/prodotto.dart';
+import 'package:dart_application/employee.dart';
+import 'package:dart_application/persona.dart';
 
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
@@ -47,14 +47,22 @@ void main(List<String> arguments) {
   // print("Moltiplicazione: ${Calcolatrice.moltiplica(5, 3)}");
   // print("Divisione: ${Calcolatrice.dividi(5, 3)}");
 
-  print("\n===[ Prodotto ]========");
-  var prodotto = Prodotto(1, "Prodotto A", 100.0);
-  var prodottoScontato = Prodotto.sconto(2, "Prodotto B", 200.0);
+  // print("\n===[ Prodotto ]========");
+  // var prodotto = Prodotto(1, "Prodotto A", 100.0);
+  // var prodottoScontato = Prodotto.sconto(2, "Prodotto B", 200.0);
 
-  print("Prodotto: ${prodotto.nome}, Prezzo: ${prodotto.prezzo}");
-  print(
-    "Prodotto scontato: ${prodottoScontato.nome}, Prezzo: ${prodottoScontato.prezzo}",
-  );
+  // print("Prodotto: ${prodotto.nome}, Prezzo: ${prodotto.prezzo}");
+  // print(
+  //   "Prodotto scontato: ${prodottoScontato.nome}, Prezzo: ${prodottoScontato.prezzo}",
+  // );
+
+  print("\n===[ Ereditarietà ]========");
+  Persona persona = Persona("Mario", "Rossi", 30);
+  Employee employee = Employee("Luca", "Bianchi", 25, "Sviluppatore", 3000);
+
+  persona.presentati();
+  employee.presentati();
+  employee.displayEmployeeInfo();
 }
 
 // // Funzione per calcolare la media dei voti degli studenti
