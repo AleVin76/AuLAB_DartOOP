@@ -1,5 +1,5 @@
-import 'package:dart_application/employee.dart';
-import 'package:dart_application/persona.dart';
+import 'package:dart_application/admin.dart';
+import 'package:dart_application/guest.dart';
 
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
@@ -56,13 +56,20 @@ void main(List<String> arguments) {
   //   "Prodotto scontato: ${prodottoScontato.nome}, Prezzo: ${prodottoScontato.prezzo}",
   // );
 
-  print("\n===[ Ereditarietà ]========");
-  Persona persona = Persona("Mario", "Rossi", 30);
-  Employee employee = Employee("Luca", "Bianchi", 25, "Sviluppatore", 3000);
+  // print("\n===[ Ereditarietà ]========");
+  // Persona persona = Persona("Mario", "Rossi", 30);
+  // Employee employee = Employee("Luca", "Bianchi", 25, "Sviluppatore", 3000);
 
-  persona.presentati();
-  employee.presentati();
-  employee.displayEmployeeInfo();
+  // persona.presentati();
+  // employee.presentati();
+  // employee.displayEmployeeInfo();
+
+  print("\n===[ Classi astratteo ]========");
+  Admin admin = Admin("adminUser", "admin@example.com");
+  Guest guest = Guest("guestUser", "guest@example.com");
+
+  admin.mostraInfo();
+  guest.mostraInfo();
 }
 
 // // Funzione per calcolare la media dei voti degli studenti
