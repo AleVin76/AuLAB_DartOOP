@@ -1,8 +1,3 @@
-import 'package:dart_application/admin.dart';
-import 'package:dart_application/enemy.dart';
-import 'package:dart_application/guest.dart';
-import 'package:dart_application/player.dart';
-
 void main(List<String> arguments) {
   //print('Hello world: ${dart_application.calculate()}!');
 
@@ -73,15 +68,32 @@ void main(List<String> arguments) {
   // admin.mostraInfo();
   // guest.mostraInfo();
 
-  print("\n===[ Classi interfacce ]========");
-  Player player = Player(100);
-  Enemy enemy = Enemy(80);
+  // print("\n===[ Classi interfacce ]========");
+  // Player player = Player(100);
+  // Enemy enemy = Enemy(80);
 
-  player.attack(); // Player attacca
-  enemy.takeDamage(20); // Nemico subisce danno 20
-  enemy.attack(); // Nemico attacca
-  player.takeDamage(15); // Player subisce danno 15
-  player.heal(10); // Player si cura di 10
+  // player.attack(); // Player attacca
+  // enemy.takeDamage(20); // Nemico subisce danno 20
+  // enemy.attack(); // Nemico attacca
+  // player.takeDamage(15); // Player subisce danno 15
+  // player.heal(10); // Player si cura di 10
+
+  print("\n===[ List - Set ]========");
+  List<String> libri = [
+    "Il Signore degli Anelli",
+    "1984",
+    "Harry Potter",
+    "Il Signore degli Anelli",
+  ];
+  print("Elenco libri: $libri"); // Stampa la lista completa dei libri
+  print("Secondo elementi: ${libri[2]}");
+  libri.add("Il Grande Gatsby"); // Aggiunge un libro alla lista
+  print("Elenco libri (add): $libri");
+  libri.remove("Il Signore degli Anelli");
+  print("Elenco libri (remove): $libri");
+
+  var libriFiltrati = libri.where((libro) => libro.contains("1984")).toList();
+  print("Libri filtrati: $libriFiltrati");
 }
 
 // // Funzione per calcolare la media dei voti degli studenti
