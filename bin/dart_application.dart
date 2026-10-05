@@ -86,7 +86,9 @@ void main(List<String> arguments) {
     "Il Signore degli Anelli",
   ];
   print("Elenco libri: $libri"); // Stampa la lista completa dei libri
-  print("Secondo elementi: ${libri[2]}");
+  print(
+    "Secondo elementi: ${libri[1]}",
+  ); // Stampa il secondo elemento della lista
   libri.add("Il Grande Gatsby"); // Aggiunge un libro alla lista
   print("Elenco libri (add): $libri");
   libri.remove("Il Signore degli Anelli");
