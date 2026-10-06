@@ -78,24 +78,50 @@ void main(List<String> arguments) {
   // player.takeDamage(15); // Player subisce danno 15
   // player.heal(10); // Player si cura di 10
 
-  print("\n===[ List - Set ]========");
-  List<String> libri = [
-    "Il Signore degli Anelli",
-    "1984",
-    "Harry Potter",
-    "Il Signore degli Anelli",
-  ];
-  print("Elenco libri: $libri"); // Stampa la lista completa dei libri
-  print(
-    "Secondo elementi: ${libri[1]}",
-  ); // Stampa il secondo elemento della lista
-  libri.add("Il Grande Gatsby"); // Aggiunge un libro alla lista
-  print("Elenco libri (add): $libri");
-  libri.remove("Il Signore degli Anelli");
-  print("Elenco libri (remove): $libri");
+  // print("\n===[ List - Set ]========");
+  // List<String> libri = [
+  //   "Il Signore degli Anelli",
+  //   "1984",
+  //   "Harry Potter",
+  //   "Il Signore degli Anelli",
+  // ];
+  // print("Elenco libri: $libri"); // Stampa la lista completa dei libri
+  // print(
+  //   "Secondo elementi: ${libri[1]}",
+  // ); // Stampa il secondo elemento della lista
+  // libri.add("Il Grande Gatsby"); // Aggiunge un libro alla lista
+  // print("Elenco libri (add): $libri");
+  // libri.remove("Il Signore degli Anelli");
+  // print("Elenco libri (remove): $libri");
 
-  var libriFiltrati = libri.where((libro) => libro.contains("1984")).toList();
-  print("Libri filtrati: $libriFiltrati");
+  // var libriFiltrati = libri.where((libro) => libro.contains("1984")).toList();
+  // print("Libri filtrati: $libriFiltrati");
+
+  print("\n===[ Selfwork Collection Map ]========");
+  Map<String, String> libri = {
+    "J.R.R. Tolkien": "Il Signore degli Anelli",
+    "George Orwell": "1984",
+    "J.K. Rowling": "Harry Potter",
+  };
+  print("Elenco libri: $libri");
+
+  libri.forEach((autore, libro) {
+    print("Autore: $autore, Libro: $libro");
+  });
+
+  libri["Orwell"] = "1984"; // Aggiunge un libro alla mappa
+
+  libri["J.K. Rowling"] = "Harry Potter e la Pietra Filosofale"; // Modifica il libro di J.K. Rowling
+
+  var contieneChiave = libri.containsKey(
+    "Orwell",
+  ); // Verifica se la chiave "Orwell" esiste nella mappa
+  print("Cerca chiave 'Orwell': $contieneChiave");
+
+  var contieneValore = libri.containsValue(
+    "1984",
+  ); // Verifica se il valore "1984" esiste nella mappa
+  print("Cerca valore '1984': $contieneValore");
 }
 
 // // Funzione per calcolare la media dei voti degli studenti
