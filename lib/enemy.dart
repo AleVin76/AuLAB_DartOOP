@@ -1,19 +1,12 @@
-import 'package:dart_application/attacker.dart';
-import 'package:dart_application/damageable.dart';
+class Enemy {
+  String name;
+  String type;
+  int hp;
 
-class Enemy implements Attacker, Damageable {
-  int health;
-
-  Enemy(this.health);
-
-  @override
-  void attack() {
-    print('Nemico attacca!');
-  }
+  Enemy(this.name, this.type, this.hp);
 
   @override
-  void takeDamage(int amount) {
-    health -= amount;
-    print('Nemico prende $amount danni. La salute è ora $health');
+  String toString() {
+    return 'Nemico: $name, type: $type, hp: $hp}';
   }
 }

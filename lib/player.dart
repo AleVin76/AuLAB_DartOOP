@@ -1,26 +1,12 @@
-import 'package:dart_application/attacker.dart';
-import 'package:dart_application/damageable.dart';
-import 'package:dart_application/healer.dart';
+class Player {
+  String name;
+  int level;
+  int hp;
 
-class Player implements Attacker, Damageable, Healer {
-  int health;
-
-  Player(this.health);
+  Player(this.name, this.level, this.hp);
 
   @override
-  void attack() {
-    print('Giocatore attacca!');
-  }
-
-  @override
-  void takeDamage(int amount) {
-    health -= amount;
-    print('Giocatore prende $amount danni. La salute è ora $health');
-  }
-
-  @override
-  void heal(int amount) {
-    health += amount;
-    print('Giocatore si cura di $amount. La salute è ora $health');
+  String toString() {
+    return 'Giocatore: $name, level: $level, hp: $hp}';
   }
 }
