@@ -1,19 +1,14 @@
 import 'package:dart_application/enemy.dart';
-import 'package:dart_application/game_entity_repository.dart';
 import 'package:dart_application/player.dart';
 
 void main(List<String> arguments) {
-  print('===[ Selfwork Generics ]========');
+  print('===[ Selfwork Mixin ]========');
 
-  var playerRepo = GameEntityRepository<Player>();
-  playerRepo.add(Player('Mario', 5, 100));
-  playerRepo.add(Player('Luigi', 3, 80));
-  print('Giocatori:');
-  playerRepo.showAll();
+  var player = Player('Mario', 100);
+  player.displayInfo();
+  player.attack();
 
-  var enemyRepo = GameEntityRepository<Enemy>();
-  enemyRepo.add(Enemy('Goomba', 'Common', 30));
-  enemyRepo.add(Enemy('Koopa', 'Rare', 50));
-  print('Nemici:');
-  enemyRepo.showAll();
+  var enemy = Enemy('Goomba', 30);
+  enemy.displayInfo();
+  enemy.attack();
 }

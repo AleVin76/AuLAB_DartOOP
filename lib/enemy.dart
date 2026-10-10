@@ -1,12 +1,10 @@
-class Enemy {
-  String name;
+import 'package:dart_application/canattack.dart';
+
+class Enemy with CanAttack {
   String type;
   int hp;
 
-  Enemy(this.name, this.type, this.hp);
+  Enemy(this.type, this.hp);
 
-  @override
-  String toString() {
-    return 'Nemico: $name, type: $type, hp: $hp}';
-  }
+  void displayInfo() => print('Nemico tipo: $type, hp: $hp');
 }

@@ -1,12 +1,10 @@
-class Player {
+import 'package:dart_application/canattack.dart';
+
+class Player with CanAttack {
   String name;
-  int level;
   int hp;
 
-  Player(this.name, this.level, this.hp);
+  Player(this.name, this.hp);
 
-  @override
-  String toString() {
-    return 'Giocatore: $name, level: $level, hp: $hp}';
-  }
+  void displayInfo() => print('Giocatore: $name, hp: $hp');
 }
