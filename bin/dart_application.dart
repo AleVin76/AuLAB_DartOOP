@@ -1,14 +1,11 @@
-import 'package:dart_application/enemy.dart';
-import 'package:dart_application/player.dart';
+import 'package:dart_application/book_category.dart';
 
 void main(List<String> arguments) {
-  print('===[ Selfwork Mixin ]========');
+  print('===[ Selfwork Enum ]========');
 
-  var player = Player('Mario', 100);
-  player.displayInfo();
-  player.attack();
-
-  var enemy = Enemy('Goomba', 30);
-  enemy.displayInfo();
-  enemy.attack();
+  BookCategory.values.forEach((category) {
+    print('Nome completo: $category');
+    print('Pulito       : ${category.toString().split(('.')).last}');
+    print('Indice       : ${category.index}');
+  });
 }
